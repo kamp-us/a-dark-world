@@ -1,0 +1,23 @@
+{
+	"$schema": "https://json.schemastore.org/chrome-manifest",
+	"manifest_version": 3,
+	"name": "A dark world",
+	"version": "0.0.0",
+	"description": "A browser extension that shows a11y violations dramatically.",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["./lib/content-script.js"],
+			"run_at": "document_start"
+		}
+	],
+	"action": {
+		"default_icon": {
+			"16": "extension_icon.png"
+		}
+	},
+	"background": {
+		"service_worker": "./out/background.js"
+	},
+	"permissions": ["activeTab", "scripting"]
+}

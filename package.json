@@ -1,12 +1,23 @@
 {
-	"name": "@kampus/a-dark-world",
-	"version": "0.0.0",
-	"module": "mod.ts",
-	"type": "module",
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+  "name": "@kampus/a-dark-world",
+  "version": "0.0.0",
+  "module": "mod.ts",
+  "description": "A browser extension that shows a11y violations dramatically.",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.8.2",
+    "@types/chrome": "^0.0.268",
+    "fast_htmlcs": "^0.0.78",
+    "kayle": "^0.8.56",
+    "playwright": "^1.44.1"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }
